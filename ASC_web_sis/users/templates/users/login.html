@@ -1,0 +1,13 @@
+{% extends 'users/base.html' %}
+{% block conteudo %}
+<div class="container" style="padding: 30px;">
+    <h1>FAÇA LOGIN</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form }}
+        <button class="btn-primary" type="submit">Logar</button>
+        <a href="{% url 'login' %}">Solicitar Acesso</a>
+
+    </form>
+</div>
+{% endblock %}

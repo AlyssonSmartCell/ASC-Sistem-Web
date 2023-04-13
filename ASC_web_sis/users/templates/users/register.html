@@ -1,0 +1,12 @@
+{% extends 'users/base.html' %}
+{% block conteudo %}
+<div class="container">
+    <form method="post">
+        {% csrf_token %}
+        {{ formulario }}
+        <button class="btn-primary" type="submit">Criar novo usuario</button>
+        <a href="#">Logar</a>
+
+    </form>
+</div>
+{% endblock %}
