@@ -1,0 +1,12 @@
+{% extends 'users/base.html' %}
+{% block conteudo %}
+<div class="container" style="padding: 30px;">
+    <h1>FAÇA LOGIN</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form }}
+        <p>testando esta merdaaaaaaaaaaaaaa</p>
+
+    </form>
+</div>
+{% endblock %}
