@@ -1,13 +1,18 @@
 {% extends 'users/base.html' %}
 {% block conteudo %}
+{% load crispy_forms_tags %}
 <div class="container" style="padding: 30px;">
-    <h1>FAÇA LOGIN</h1>
+    <h1 style="text-align: center;">PAINEL DE SERVIÇOS</h1>
     <form method="post">
         {% csrf_token %}
-        {{ form }}
-        <button style="background-color: cyan; border-color: antiquewhite; font-style: oblique;">Criar O.S</button> <button>Consultar O.S</button>
-        <p><button>Lista de Precos</button></p>
-
+            <p>
+                <h1 style="text-align: center;font-size: 40px; " >
+                    <button style="background-color: cyan; ">Criar O.S</button> 
+                    <button style="background-color: cyan;">Consultar O.S</button>                                     
+                    <button style="background-color: cyan;">Lista de Precos</button>
+                    <button style="background-color: cyan;">Emitir Garantia</button>
+                </h1>
+            </p>
     </form>
 </div>
 {% endblock %}
