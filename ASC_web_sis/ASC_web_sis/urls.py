@@ -28,7 +28,8 @@ urlpatterns = [
     path('',auth_views.LoginView.as_view(template_name='users/login.html'), name='login'),
     path('logout/',auth_views.LogoutView.as_view(template_name='users/logout.html'), name='logout'),
     path('inicial/', views_users.pagina_inicial),
-    path('nova_os', views_users.novaos )
+    path('inicial/novaos/', views_users.novaos, name="nova_OS"),
+    path('inicial/osdetalhes', views_users.osdetalhes, name="detalhes_das_os" )
 
 
 

@@ -9,5 +9,7 @@ def pagina_inicial(request):
     return render(request, 'users/inicial.html')
 
 def novaos(request):
-    return render(request, 'users/nova_os.html')
+    return render(request, 'users/novaos.html')
 
+def osdetalhes(request):
+    return render(request, 'users/osdetalhes.html')

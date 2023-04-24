@@ -1,18 +1,17 @@
 {% extends 'users/base.html' %}
 {% block conteudo %}
 {% load crispy_forms_tags %}
-<div class="container" style="padding: 30px;">
+<div class="container">
     <h1 style="text-align: center;">PAINEL DE SERVIÇOS</h1>
-    <form method="post">
-        {% csrf_token %}
-            <p>
-                <h1 style="text-align: center;font-size: 40px; " >
-                    <button style="background-color: cyan; "><a href="{% url 'nova_os' %}"></a>  Criar O.S</button> 
-                    <button style="background-color: cyan;">Consultar O.S</button>                                     
-                    <button style="background-color: cyan;">Lista de Precos</button>
-                    <button style="background-color: cyan;">Emitir Garantia</button>
-                </h1>
-            </p>
-    </form>
+    {% csrf_token %}
+    <h1 style="text-align: center;font-size: 40px; " >
+        <button style="background-color: cyan;" ><a href="novaos" style="color: black;">Criar O.S</a></button> 
+        <button style="background-color: cyan;"><a href="osdetalhes" style="color: black;">Consultar O.S</a></button>                                     
+        <button style="background-color: cyan;"><a href="listadeprecos" style="color: black;">Listra de Preços</a></button>
+        <button style="background-color: cyan;"><a href="garantia" style="color: black;">Emitir Garantia</a></button>
+    </h1>
+    <table>
+        
+    </table>
 </div>
 {% endblock %}
