@@ -8,5 +8,6 @@ def novo_usuario(request):
 def pagina_inicial(request):
     return render(request, 'users/inicial.html')
 
-
+def novaos(request):
+    return render(request, 'users/nova_os.html')
 
