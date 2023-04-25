@@ -11,7 +11,20 @@
         <button style="background-color: cyan;"><a href="garantia" style="color: black;">Emitir Garantia</a></button>
     </h1>
     <table>
-        
+        <tr>
+            <th>Cliente</th>
+            <th>Marca</th>
+            <th>Modelo</th>
+        </tr>
+        {% for dado in dados %}
+        <tr>
+            <td>{{dado.cliente}}</td>
+            <td>{{dado.marca}}</td>
+            <td>{{dado.modelo}}</td>
+            <td><button><a href="#"">Detalhes</a></button></td>
+        </tr>
+
+        {% endfor %}
     </table>
 </div>
 {% endblock %}
