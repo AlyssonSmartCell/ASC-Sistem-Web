@@ -23,6 +23,7 @@
             <td>{{dado.modelo}}</td>
             <td><button><a href="#">Detalhes</a></button></td>
             <td><button><a href="{% url 'editar' dado.id %}">editar</a></button></td>
+            <td><button><a href="{% url 'excluir' dado.id %}">Excluir</a></button></td>
         </tr>
 
         {% endfor %}

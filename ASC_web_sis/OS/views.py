@@ -24,6 +24,13 @@ def consultarprecos(request):
 def garantia(request):
     return render(request, 'users/notadegarantia.html')
 
+def excluir(request, cliente):
+    osexcluir = ordens_servico.objects.get(pk=cliente)
+    if request.method == 'POST':
+        osexcluir.delete()
+        return redirect('PaginaInicial')
+    return render(request,'users/confirmar_exclusao.html', {'item': osexcluir})
+
 
 
     

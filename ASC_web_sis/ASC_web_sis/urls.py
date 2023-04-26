@@ -31,9 +31,10 @@ urlpatterns = [
     path('inicial/', views_users.pagina_inicial, name='PaginaInicial'),
     path('inicial/novaos/', views_users.novaos, name="nova_OS"),
     path('inicial/novaos/<int:id_os>', views_os.editar, name='editar'),
+    path('excluir_os/<int:cliente>', views_os.excluir,name='excluir'),
     path('inicial/osdetalhes', views_users.osdetalhes, name="detalhes_das_os" ),
     path('consultarprecos', views_os.consultarprecos,name='tabela'),
-    path('notadegarantia', views_os.garantia, name='garantia')
+    path('notadegarantia', views_os.garantia, name='garantia'),
 
 
 
