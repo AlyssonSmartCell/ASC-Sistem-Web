@@ -18,6 +18,7 @@ from django.contrib import admin
 from django.urls import path
 from users import views as views_users
 from django.contrib.auth import views as auth_views
+from OS import views as views_os
  
 
 
@@ -27,9 +28,12 @@ urlpatterns = [
     path('conta/', views_users.novo_usuario, name='novo_usuario'),
     path('',auth_views.LoginView.as_view(template_name='users/login.html'), name='login'),
     path('logout/',auth_views.LogoutView.as_view(template_name='users/logout.html'), name='logout'),
-    path('inicial/', views_users.pagina_inicial),
+    path('inicial/', views_users.pagina_inicial, name='PaginaInicial'),
     path('inicial/novaos/', views_users.novaos, name="nova_OS"),
-    path('inicial/osdetalhes', views_users.osdetalhes, name="detalhes_das_os" )
+    path('inicial/novaos/<int:id_os>', views_os.editar, name='editar'),
+    path('inicial/osdetalhes', views_users.osdetalhes, name="detalhes_das_os" ),
+    path('consultarprecos', views_os.consultarprecos,name='tabela'),
+    path('notadegarantia', views_os.garantia, name='garantia')
 
 
 
