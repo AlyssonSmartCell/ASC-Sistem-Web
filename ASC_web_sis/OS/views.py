@@ -1,7 +1,8 @@
 from django.shortcuts import render,redirect,HttpResponse
 from django.contrib.auth.forms import UserCreationForm
-from .models import ordens_servico
-from .forms import CadastroForm
+from .models import ordens_servico,listadeprecos
+from .forms import CadastroForm,ListaDePrecosForm
+ 
 
 
 
@@ -19,7 +20,10 @@ def editar(request, id_os):
         return redirect('PaginaInicial')
     
 def consultarprecos(request):
-    return render(request, 'users/tabeladeprecos.html')
+    tabela = {
+        'tabela': listadeprecos.objects.all()
+    }
+    return render(request, 'users/tabeladeprecos.html', context= tabela)
 
 def garantia(request):
     return render(request, 'users/notadegarantia.html')
@@ -31,6 +35,18 @@ def excluir(request, cliente):
         return redirect('PaginaInicial')
     return render(request,'users/confirmar_exclusao.html', {'item': osexcluir})
 
+def cadastropeças(request):
+    if request.method == 'POST':
+        a = ListaDePrecosForm(request.POST)
+        if a.is_valid():
+            a.save()
+        return redirect('cadastropeças')
 
+    else:
+        Cadastro_pecasForm = ListaDePrecosForm
+        cadastro = {
+            'cadastro': Cadastro_pecasForm
+        }
+        return render(request, 'users/cadastropeças.html', context=cadastro)
 
     

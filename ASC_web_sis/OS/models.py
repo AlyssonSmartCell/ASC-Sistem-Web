@@ -2,6 +2,7 @@ from django.db import models
 from datetime import datetime
 
 class ordens_servico(models.Model):
+
     #dados cliente
     cliente = models.TextField(max_length=255)
     email = models.TextField(max_length=255)
@@ -48,6 +49,11 @@ class ordens_servico(models.Model):
     #defeito apontado pelo cliente
     defeito = models.TextField(max_length=50)
 
+class listadeprecos(models.Model):
+    marca = models.TextField(max_length=20)
+    modelo = models.TextField(max_length=20)
+    pecaeservico = models.TextField(max_length=50)
+    valor = models.FloatField()
 
 
 

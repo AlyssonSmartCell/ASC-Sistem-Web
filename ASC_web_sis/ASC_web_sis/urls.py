@@ -35,6 +35,7 @@ urlpatterns = [
     path('inicial/osdetalhes', views_users.osdetalhes, name="detalhes_das_os" ),
     path('consultarprecos', views_os.consultarprecos,name='tabela'),
     path('notadegarantia', views_os.garantia, name='garantia'),
+    path('cadastrodepecas', views_os.cadastropeças, name='cadastropeças')
 
 
 

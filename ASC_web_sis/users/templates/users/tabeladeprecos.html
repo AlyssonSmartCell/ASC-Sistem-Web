@@ -1,4 +1,23 @@
 <div class="container">
+    {% csrf_token %}
     <h1>TABELA DE PREÇOS E SERVIÇOS</h1>
+     <table>
+        <tr>
+            <th>Marca</th>
+            <th>Modelo</th>
+            <th>Peça</th>
+            <Th>Valor</Th>
+        </tr>
+        {% for dado in tabela %}
+        <tr>
+            <td>{{dado.marca}}</td>
+            <td>{{dado.modelo}}</td>
+            <td>{{dado.pecaeservico}}</td>
+            <td>R${{dado.valor}}</td>
+        </tr>
+        {% endfor %}
+    <button><a href="{% url 'cadastropeças' %}">Cadastro De Peças</a></button>
+
+     </table>
 
 </div>
