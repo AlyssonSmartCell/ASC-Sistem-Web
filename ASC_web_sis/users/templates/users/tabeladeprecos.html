@@ -14,9 +14,11 @@
             <td>{{dado.modelo}}</td>
             <td>{{dado.pecaeservico}}</td>
             <td>R${{dado.valor}}</td>
+            <td><button><a href="{% url 'excluirpeca' dado.id %}">Excluir</a></button></td>
         </tr>
         {% endfor %}
-    <button><a href="{% url 'cadastropeças' %}">Cadastro De Peças</a></button>
+        
+        <button><a href="{% url 'cadastropeças' %}">Cadastro De Peças</a></button>
 
      </table>
 

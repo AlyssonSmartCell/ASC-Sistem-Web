@@ -48,5 +48,13 @@ def cadastropeças(request):
             'cadastro': Cadastro_pecasForm
         }
         return render(request, 'users/cadastropeças.html', context=cadastro)
+    
+def excluirpeca(request, id_peca):
+    peca_a_excluir = listadeprecos.objects.get(pk=id_peca)
+    if request.method == 'POST':
+        peca_a_excluir.delete()
+        return redirect('tabela')
+    return render(request, 'users/exclusaopeca.html', {'item': peca_a_excluir})
+
 
     
