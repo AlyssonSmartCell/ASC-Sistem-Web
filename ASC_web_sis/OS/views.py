@@ -40,7 +40,7 @@ def cadastropeças(request):
         a = ListaDePrecosForm(request.POST)
         if a.is_valid():
             a.save()
-        return redirect('cadastropeças')
+        return redirect('tabela')
 
     else:
         Cadastro_pecasForm = ListaDePrecosForm
