@@ -47,7 +47,7 @@ def cadastropeças(request):
         cadastro = {
             'cadastro': Cadastro_pecasForm
         }
-        return render(request, 'users/cadastropeças.html', context=cadastro)
+        return render(request, 'users/cadastropecas.html', context=cadastro)
     
 def excluirpeca(request, id_peca):
     peca_a_excluir = listadeprecos.objects.get(pk=id_peca)
@@ -55,6 +55,22 @@ def excluirpeca(request, id_peca):
         peca_a_excluir.delete()
         return redirect('tabela')
     return render(request, 'users/exclusaopeca.html', {'item': peca_a_excluir})
+
+def editarpeca(request, id_editar):
+    ordemdeservico = listadeprecos.objects.get(pk=id_editar)
+
+    if request.method == 'GET':
+        formulario_cadastrade = ListaDePrecosForm(instance=ordemdeservico)
+        return render(request,'users/cadastropecas.html', )
+    else:
+        formulario = ListaDePrecosForm(request.POST,instance=ordemdeservico)
+        if formulario.is_valid():
+            formulario.save()
+        return redirect('tabela')
+    
+
+    
+    
 
 
     

@@ -15,6 +15,7 @@
             <td>{{dado.pecaeservico}}</td>
             <td>R${{dado.valor}}</td>
             <td><button><a href="{% url 'excluirpeca' dado.id %}">Excluir</a></button></td>
+            <td><button><a href="{% url 'editarpeca' dado.id %}">Editar</a></button></td>
         </tr>
         {% endfor %}
         

@@ -37,6 +37,7 @@ urlpatterns = [
     path('notadegarantia', views_os.garantia, name='garantia'),
     path('cadastrodepecas', views_os.cadastropeças, name='cadastropeças'),
     path('excluir_peca/<int:id_peca>' , views_os.excluirpeca, name='excluirpeca'),
+    path('editarpecaeservico/<int:id_editar>', views_os.editarpeca, name='editarpeca')
 
 
 
