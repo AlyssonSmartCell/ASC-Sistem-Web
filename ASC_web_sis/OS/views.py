@@ -68,8 +68,24 @@ def editarpeca(request, id_editar):
             formulario.save()
         return redirect('tabela')
     
+def osdetalhes(request):
+    dados = {
+        'dados': ordens_servico.objects.all()
+    }
+    return render(request, 'users/osdetalhes.html', context=dados)
 
-    
+def detalhescompletos(request, id_os_completa ):
+    osdetalhe = {
+        'osdetalhe': ordens_servico.objects.get(pk=id_os_completa)
+    }
+    return render(request,'users/detalhesoscompletas.html', context=osdetalhes)
+
+def imprimiros(request, idos):
+    os_imprimir = {
+        'dados': ordens_servico.objects.all()
+    }
+    return render(request, 'users/osdetalhes.html', context=os_imprimir)
+  
     
 
 

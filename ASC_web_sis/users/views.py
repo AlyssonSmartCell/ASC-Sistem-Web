@@ -31,8 +31,4 @@ def novaos(request):
         }
         return render(request, 'users/novaos.html', context=formulario)
 
-def osdetalhes(request,id_os):
-    dados = {
-        'CadastroForm' : ordens_servico.objects.get(pk=id_os)
-    }
-    return render(request, 'users/osdetalhes.html')
+

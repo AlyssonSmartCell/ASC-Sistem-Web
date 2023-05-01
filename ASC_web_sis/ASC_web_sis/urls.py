@@ -32,12 +32,14 @@ urlpatterns = [
     path('inicial/novaos/', views_users.novaos, name="nova_OS"),
     path('inicial/novaos/<int:id_os>', views_os.editar, name='editar'),
     path('excluir_os/<int:cliente>', views_os.excluir,name='excluir'),
-    path('inicial/osdetalhes', views_users.osdetalhes, name="detalhes_das_os" ),
+    path('osdetalhes', views_os.osdetalhes, name="detalhes_das_os" ),
+    path('detalhescompletos/<int:id_os_completa>', views_os.detalhescompletos, name='detalhes_completos'),
     path('consultarprecos', views_os.consultarprecos,name='tabela'),
     path('notadegarantia', views_os.garantia, name='garantia'),
     path('cadastrodepecas', views_os.cadastropeças, name='cadastropeças'),
     path('excluir_peca/<int:id_peca>' , views_os.excluirpeca, name='excluirpeca'),
-    path('editarpecaeservico/<int:id_editar>', views_os.editarpeca, name='editarpeca')
+    path('editarpecaeservico/<int:id_editar>', views_os.editarpeca, name='editarpeca'),
+    path('imprimiros/<int:idos>', views_os.imprimiros, name='imprimiros')
 
 
 
