@@ -1,4 +1,6 @@
-
+{% extends 'users/base.html' %}
+{% block conteudo %}
+{% load crispy_forms_tags %}
 <form method="POST">
     {% csrf_token %}
     <h1>Deseja mesmo excluir a O.S de {{item.cliente}}?</h1>
@@ -6,3 +8,4 @@
     <button type="submit">Confirmar</button>
 
 </form>
+{% endblock %}
