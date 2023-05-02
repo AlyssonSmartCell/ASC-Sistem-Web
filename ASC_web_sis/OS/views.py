@@ -81,10 +81,10 @@ def detalhescompletos(request, id_os_completa ):
     return render(request,'users/detalhesoscompletas.html', context=osdetalhes)
 
 def imprimiros(request, idos):
-    os_imprimir = {
+    sla = {
         'dados': ordens_servico.objects.get(pk=idos)
     }
-    print(os_imprimir)
+    return render(request, 'users/osdetalhes.html', context=sla)
   
     
 
