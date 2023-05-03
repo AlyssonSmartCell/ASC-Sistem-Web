@@ -1,30 +1,70 @@
 {% extends 'users/base.html' %}
 {% block conteudo %}
 {% load crispy_forms_tags %}
+
+<style>
+    .table tr{
+        color: white;
+        text-align: center;
+        text
+    }
+        
+    table, th, td, tr{
+        border: 1px solid #52a5ef; 
+        border-collapse: collapse;
+        border-radius: 50px;
+        margin-top: 40px;
+        border-top: 2px solid #52a5ef;
+    }
+    .titulo{
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .botoes button{
+        background-color: #52a5ef;
+        border-radius: 10px;
+        
+    }
+    .botoes a{
+        text-decoration: none;
+    }
+    .bt td, button {
+        border-radius: 5px;
+        text-decoration: none;
+        background-color: #52a5ef;
+        border: none;
+        color: black;
+    }
+</style>
 <div class="container">
-    <h1 style="text-align: center;">PAINEL DE SERVIÇOS</h1>
+    <h1 class="titulo" style="text-align: center;">PAINEL DE SERVIÇOS</h1>
     {% csrf_token %}
     <div class="container">
-        <h1 style="text-align: center;font-size: 40px; " >
-            <button style="background-color: cyan;" ><a href="novaos" style="color: black;">Criar O.S</a></button> 
-            <button style="background-color: cyan;"><a href="{% url 'detalhes_das_os' %}" style="color: black;">Consultar O.S</a></button>                                     
-            <button style="background-color: cyan;"><a href="{% url 'tabela' %}" style="color: black;">Listra de Preços</a></button>
-            <button style="background-color: cyan;"><a href="{% url 'garantia' %}" style="color: black;">Emitir Garantia</a></button>
+        <h1 class="botoes" style="text-align: center;font-size: 40px; " >
+            <button ><a href="novaos" style="color: black; ">Criar O.S</a></button> 
+            <button ><a href="{% url 'detalhes_das_os' %}" style="color: black;">Consultar O.S</a></button>                                     
+            <button ><a href="{% url 'tabela' %}" style="color: black;">Listra de Preços</a></button>
+            <button ><a href="{% url 'garantia' %}" style="color: black;">Emitir Garantia</a></button>
         </h1>
         <table class="table">
             <tr>
-                <th>Cliente</th>
-                <th>Marca</th>
-                <th>Modelo</th>
+                <th style="font-size: larger; font-size: 22px;">CLIENTE</th>
+                <th style="font-size: larger; font-size: 22px;">MARCA</th>
+                <th style="font-size: larger; font-size: 22px;">MODELO</th>
+                <th></th>
+                <th></th>
+                <th></th>
             </tr>
             {% for dado in dados %}
-            <tr>
+            <tr >
                 <td>{{dado.cliente}}</td>
                 <td>{{dado.marca}}</td>
                 <td>{{dado.modelo}}</td>
-                <td><button><a href="{% url 'imprimiros' dado.id %}">Imprimir OS</a></button></td>
-                <td><button style="background-color: aqua;"><a href="{% url 'editar' dado.id %}" style="color: black;">editar</a></button></td>
-                <td><button style="background-color: red; "><a href="{% url 'excluir' dado.id %}" style="color: black;">Excluir</a></button></td>
+                <div class="bt">
+                    <td><button ><a href="{% url 'imprimiros' dado.id %}" style="text-align: center; text-decoration: none; color: black;">Imprimir OS</a></button></td>
+                    <td><button style="background-color: #52a5ef;"><a href="{% url 'editar' dado.id %}" style="color: black; text-align: center; text-decoration: none;">editar</a></button></td>
+                    <td><button style="background-color: red; "><a href="{% url 'excluir' dado.id %}" style="color: black; text-align: center; text-decoration: none;">Excluir</a></button></td>
+                </div>
             </tr>
     
             {% endfor %}
