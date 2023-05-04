@@ -1,0 +1,37 @@
+.titulo{
+    color: white;
+    text-align: center;
+}
+.form-label{
+    color: white;
+    
+}
+
+
+#id_cliente.textarea.form-control, #id_email.textarea.form-control, #id_marca.textarea.form-control, #id_modelo.textarea.form-control, #id_defeito.textarea.form-control, #id_data.dateinput.form-control, #id_contato.numberinput.form-control {
+    color: black;
+    text-align: center ;
+    height: 50px;
+    width: 50%;
+    border: none;
+    border-radius: 20px;
+    opacity: 70%;
+    align-items: center;
+    background-color: #52a5ef ;
+    font-weight: bold;
+    font-size: 20px;
+    
+    
+}
+
+label.form-check-label{
+    color: white;
+}
+#bt{
+    background-color: #52a5ef;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    text-align: center;
+    
+}

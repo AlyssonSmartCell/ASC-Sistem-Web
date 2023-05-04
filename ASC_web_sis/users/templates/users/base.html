@@ -18,14 +18,19 @@
         background-repeat: no-repeat;
         background-size: contain;
       }
+      .navbar-brand{
+        color: white;
+      }
+
+      
     </style>
   </head>
   <body style="background-image: url('{% static 'imagens/fundo.png' %}');">
     <nav class="navbar" >
-        <a class="navbar-brand" href="#">AlyssonSmartCell</a>
+        <a class="navbar-brand" href="{% url 'PaginaInicial' %}">AlyssonSmartCell</a>
         <ul style="list-style: none;">
             <li style="float: left;">
-                <a class="nav-item nav-link" href="#">Sair</a>
+                <a class="navbar-brand" href="#">Sair</a>
             </li>
         </ul>
       </nav>

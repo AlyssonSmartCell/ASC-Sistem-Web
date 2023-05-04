@@ -85,13 +85,8 @@ def imprimiros(request, idos):
     sla = {
         'dados': ordens_servico.objects.get(pk=idos)
     }
-<<<<<<< HEAD
-    print(os_imprimir)
+    
 
-=======
-    return render(request, 'users/osdetalhes.html', context=sla)
-  
->>>>>>> e17ea1a0508b6de1defdd4b7c8e4125541def9e0
     
 
 
