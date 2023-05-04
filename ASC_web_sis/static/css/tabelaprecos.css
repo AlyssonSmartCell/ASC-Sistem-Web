@@ -1,0 +1,23 @@
+#titulo{
+    color: white;
+    text-align: center;
+    font-style: italic;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+table, th, td, tr{
+    border: 1px solid #52a5ef; 
+    border-collapse: collapse;
+    border-top: 2px solid #52a5ef;
+    color: white;
+    text-align: center;
+}
+
+td{
+    padding: 5px;
+}
+
+
+    
+
