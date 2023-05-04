@@ -2,6 +2,7 @@ from django.shortcuts import render,redirect,HttpResponse
 from django.contrib.auth.forms import UserCreationForm
 from .models import ordens_servico,listadeprecos
 from .forms import CadastroForm,ListaDePrecosForm
+from docx import Document
  
 
 
@@ -85,7 +86,7 @@ def imprimiros(request, idos):
         'dados': ordens_servico.objects.get(pk=idos)
     }
     print(os_imprimir)
-  
+
     
 
 
