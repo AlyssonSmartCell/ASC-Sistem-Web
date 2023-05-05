@@ -1,0 +1,47 @@
+h1{
+    color: white;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+#id_marca.textarea.form-control,#id_modelo.textarea.form-control,#id_pecaeservico.textarea.form-control, #id_valor.numberinput.form-control{
+    color: black;
+    text-align: center ;
+    height: 50px;
+    width: 50%;
+    border: none;
+    border-radius: 20px;
+    opacity: 70%;
+    align-items: center;
+    background-color: #52a5ef ;
+    font-weight: bold;
+    font-size: 20px;
+    margin: 0 auto;
+    
+}
+button{
+    text-align: center;
+    background-color: lightgreen;
+    border: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin: 0 auto;
+    width: 95px;
+    height: 35px;
+    display: block;
+    border-radius: 10px;
+    margin-top: 15px;
+    
+}
+
+
+#div_id_marca,#div_id_modelo,#div_id_pecaeservico,#div_id_valor{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    font-style: italic;
+}

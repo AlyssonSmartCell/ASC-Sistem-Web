@@ -1,6 +1,8 @@
 {% extends 'users/base.html' %}
 {% block conteudo %}
 {% load crispy_forms_tags %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/cdp.css' %}">
 <form action="" method="post">
     {% csrf_token %}
     <h1>Formulario Cadastro De Peças/Serviços</h1>
