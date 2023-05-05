@@ -1,11 +1,56 @@
 {% extends 'users/base.html' %}
 {% block conteudo %}
 {% load crispy_forms_tags %}
+<style>
+    #titulo{
+        color: yellow ;
+        font-family: Arial, Helvetica, sans-serif;
+        font-style: italic;
+        text-align: center;
+        margin-top: 200px;
+    }
+    #escrita{
+        color: white ;
+        font-family: Arial, Helvetica, sans-serif;
+        font-style: italic;
+        text-align: center;
+
+    }
+    div{
+        text-align: center;
+        margin-top: 20px;
+
+    }
+    #Cancelar{
+        border: none;
+        border-radius: 5px;
+        color: black;
+        background-color: red;
+        text-align: center;
+        text-decoration: none;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+    }
+    #Confirmar{
+        border: none;
+        border-radius: 5px;
+        color: black;
+        background-color: lightgreen;
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        
+    }
+
+</style>
 <form method="POST">
     {% csrf_token %}
-    <h1>Deseja mesmo excluir a O.S de {{item.cliente}}?</h1>
-    <button ><a href="{% url 'PaginaInicial' %}">Cancelar</a></button>
-    <button type="submit">Confirmar</button>
+    <H1 id="titulo">ATENÇÃO!!!</H1>
+    <h1 id="escrita">Deseja mesmo excluir a O.S de {{item.cliente}}?</h1>
+    <div >
+        <button id="Cancelar"><a id="Cancelar" href="{% url 'PaginaInicial' %}">Cancelar</a></button>
+        <button id="Confirmar" type="submit">Confirmar</button>
+    </div>
 
 </form>
 {% endblock %}

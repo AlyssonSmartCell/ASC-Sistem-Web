@@ -19,12 +19,11 @@
                 <td>{{dado.modelo}}</td>
                 <td>{{dado.pecaeservico}}</td>
                 <td>R${{dado.valor}}</td>
-                <td><button><a href="{% url 'excluirpeca' dado.id %}">Excluir</a></button></td>
-                <td><button><a href="{% url 'editarpeca' dado.id %}">Editar</a></button></td>
+                <td><button id="excluir"><a id="excluir" href="{% url 'excluirpeca' dado.id %}">Excluir</a></button></td>
             </tr>
             {% endfor %}
             
-            <button><a href="{% url 'cadastropeças' %}">Cadastro De Peças</a></button>
+            <button id="bt-cadastro"><a id="link_cadastro" href="{% url 'cadastropeças' %}">Cadastro De Peças</a></button>
     
          </table>
     </div>

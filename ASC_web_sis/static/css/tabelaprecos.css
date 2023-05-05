@@ -17,6 +17,38 @@ table, th, td, tr{
 td{
     padding: 5px;
 }
+table{
+    align-items: center;
+    width: auto;
+    margin: 0 auto;
+}
+
+#bt-cadastro{
+    margin-left: 249px;
+    margin-bottom: 15px;
+    color: black;
+    background-color: #52a5ef;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+#link_cadastro{
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+}
+#excluir{
+    background-color: red;
+    color: black;
+    border-radius: 5px;
+    border: none;
+    text-decoration: none;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
 
 
     
