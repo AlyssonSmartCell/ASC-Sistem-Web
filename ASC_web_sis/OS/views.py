@@ -82,8 +82,11 @@ def detalhescompletos(request, id_os_completa ):
     return render(request,'users/detalhesoscompletas.html', context=osdetalhes)
 
 
-def imprimiros(request, id_os):
-    ordens_servico.objects.get(pk=id_os)
+def imprimiros(request, id):
+    dados = {
+        'dados': ordens_servico.objects.get(pk=id)
+    }
+    return render(request, 'users/testes.html', dados)
 
 
     

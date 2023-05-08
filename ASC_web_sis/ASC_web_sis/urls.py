@@ -39,6 +39,7 @@ urlpatterns = [
     path('cadastrodepecas', views_os.cadastropeças, name='cadastropeças'),
     path('excluir_peca/<int:id_peca>' , views_os.excluirpeca, name='excluirpeca'),
     path('editarpecaeservico/<int:id_editar>', views_os.editarpeca, name='editarpeca'),
+    path('imprimiros/<int:id>',views_os.imprimiros, name='imprimiros')
     
 
 
