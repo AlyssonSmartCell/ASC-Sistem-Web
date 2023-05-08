@@ -34,4 +34,20 @@ label.form-check-label{
     border-radius: 8px;
     text-align: center;
     
+
+}
+
+#bt{
+    text-align: center;
+    background-color: lightgreen;
+    border: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin: 0 auto;
+    width: 95px;
+    height: 35px;
+    display: block;
+    border-radius: 10px;
+    margin-top: 15px;
+    
 }

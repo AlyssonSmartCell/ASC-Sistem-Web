@@ -13,7 +13,7 @@
         border: 1px solid #52a5ef; 
         border-collapse: collapse;
         border-radius: 50px;
-        margin-top: 40px;
+        margin-top: 20px;
         border-top: 2px solid #52a5ef;
     }
     .titulo{
@@ -37,6 +37,15 @@
         color: black;
         
     }
+
+    h2{
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        font-style: italic;
+        font-weight: bold;
+        text-align: center;
+        margin-top: 40px;
+    }
 </style>
 <div class="container">
     <h1 class="titulo" style="text-align: center;">PAINEL DE SERVIÇOS</h1>
@@ -44,10 +53,12 @@
     <div class="container">
         <h1 class="botoes" style="text-align: center;font-size: 40px; " >
             <button ><a href="novaos" style="color: black; ">Criar O.S</a></button> 
-            <button ><a href="{% url 'detalhes_das_os' %}" style="color: black;">Consultar O.S</a></button>                                     
+            <button ><a href="{% url 'detalhes_das_os' %}" style="color: black;">Lista de Clientes</a></button>                                     
             <button ><a href="{% url 'tabela' %}" style="color: black;">Listra de Preços</a></button>
             <button ><a href="{% url 'garantia' %}" style="color: black;">Emitir Garantia</a></button>
         </h1>
+
+        <h2>Painel De O.S Autorizadas</h2>
         <table class="table">
             <tr>
                 <th style="font-size: larger; font-size: 22px;">CLIENTE</th>
